@@ -4,6 +4,9 @@ import Home from './Home.vue';
 
 describe('Home', () => {
 
+    ////mocker components (store)
+    // vi.mock(g../stores/general.store.ts, () => { useGeneralStore: () => { addGeneralData: () => {}, generalData: {} }})
+
     it('render component correctly', () => {
         const wrapper = mount(Home)
         expect(wrapper.find("h1").text()).toBe("Welcome home")
@@ -16,5 +19,4 @@ describe('Home', () => {
         await wrapper.find("#counter-btn").trigger("click")
         expect(wrapper.find('#counter').text()).toContain("qCounter: 1")
     })
-
 })
