@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import FetchDetailComponent from './FetchDetailComponent.vue';
+
 </script>
 
 <template>
     <header>
+        <FetchDetailComponent />
         <nav>
             <ul>
                 <router-link class="link" to="/">Inicio</router-link>
