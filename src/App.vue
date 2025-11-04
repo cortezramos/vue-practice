@@ -14,12 +14,15 @@
   import ComputedComponent from './components/ComputedComponent.vue'
   import WatchComponent from './components/WatchComponent.vue'
 import FormComponent from './components/FormComponent.vue'
+import StoreComponent from './components/StoreComponent.vue'
 
   const propForChild = 'Props in vue'
 </script>
 
 <template>
   <HeaderComponent />
+  <RouterView />
+  <StoreComponent />
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />

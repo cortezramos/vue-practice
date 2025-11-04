@@ -5,9 +5,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <router-link class="link" to="/">Inicio</router-link>
+                <router-link class="link" to="/home">Home</router-link>
+                <router-link class="link" :to="{ path: 'test'}">Test</router-link>
             </ul>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         list-style: none;
         padding: 0;
     }
-    nav li {
+    .link {
         display: inline;
         margin-right: 1em;
     }
