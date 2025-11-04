@@ -1,7 +1,11 @@
 <script setup lang="ts">
     import { reactive } from 'vue';
+    import { useGeneralStore } from '../stores/general.store';
+    const generalStore = useGeneralStore();
+    const { addGeneralData } = generalStore
 
     const movie = reactive({
+        id: 0,
         title: '',
         director: '',
         duration: 0
@@ -9,6 +13,12 @@
 
     const handleOnSubmit = () => {
         console.log(`Título: ${movie.title}, Director: ${movie.director}, Duración: ${movie.duration} minutos`)
+
+        addGeneralData(
+            //con spread operator para enviar el estado del objeto mutado
+            {...movie}
+        )
+
         movie.title = ''
         movie.director = ''
         movie.duration = 0

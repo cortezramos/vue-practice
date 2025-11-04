@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 import { ref, type Ref } from "vue";
 
-interface DataInformation {
+export interface DataInformation {
     id: number;
     title: String;
     duration: number;
@@ -21,4 +21,6 @@ export const useGeneralStore = defineStore("general", () => {
         addGeneralData,
         generalData
     }
+}, {
+    persist: true
 })
