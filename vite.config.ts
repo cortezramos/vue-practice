@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { createHtmlPlugin } from 'vite-plugin-html'
@@ -10,4 +10,8 @@ export default defineConfig({
     vueDevTools(),
     createHtmlPlugin({})
   ],
+  test: {
+    globals: true,
+    environment: 'jsdom'
+  }
 })
