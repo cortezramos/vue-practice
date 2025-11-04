@@ -1,6 +1,8 @@
 <script setup lang="ts">
     import { reactive } from 'vue';
     import { useGeneralStore } from '../stores/general.store';
+    import router from '../router';
+
     const generalStore = useGeneralStore();
     const { addGeneralData } = generalStore
 
@@ -22,6 +24,7 @@
         movie.title = ''
         movie.director = ''
         movie.duration = 0
+        router.push("/home")
     }
     
 </script>
